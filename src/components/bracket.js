@@ -1,5 +1,3 @@
-import { SingleEliminationBracket, Match, SVGViewer } from '@g-loot/react-tournament-brackets';
-import { useConfig } from '../context/general';
 import { useEffect, useState } from 'react';
 import { Box, Button, Card, CardActions, CardContent, CardHeader, IconButton, List, ListItem, ListItemText, Typography } from '@mui/material';
 import RoulleteIcon from '@mui/icons-material/Casino';
