@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Config from './components/config'
+import { GeneralContextProvider } from './context/general'
+import Bracket from './components/bracket'
+import { Box } from '@mui/material'
 
-function App() {
+export default () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <GeneralContextProvider>
+      <Pages/>
+    </GeneralContextProvider>
+  )
 }
 
-export default App;
+const Pages = () => {
+  return (
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Config/>
+      <Bracket/>
+    </Box>
+  )
+}
